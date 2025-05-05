@@ -8,7 +8,9 @@
 
 
 	<!-- dao, service auto scanning -->
-	<context:component-scan base-package="**.service,**.dao"/>
+	<!-- <context:component-scan base-package="**.service,**.dao"/> -->
+	<context:component-scan base-package="mylab.customer"/>
+	
 	
 	<context:property-placeholder
 		location="classpath:values.properties" />
@@ -27,7 +29,7 @@
 			value="classpath:mybatis/SqlMapConfig.xml" />
 		<property name="mapperLocations">
 			<list>
-				<value>classpath:mybatis/*Mapper.xml</value>
+				<value>classpath:mybatis/CustomerMapper.xml</value>
 			</list>
 		</property>
 	</bean>
